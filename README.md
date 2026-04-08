@@ -22,7 +22,7 @@ A premium, conversational AI assistant designed to handle customer inquiries for
 
 ### 1. Conversational AI (Gemini)
 The bot has transitioned from a rigid state-machine to a **Natural Language Interface**. 
-- **LLM Engine**: Uses `gemini-3.1-flash-lite-preview` for high-speed, intelligent responses.
+- **LLM Engine**: Uses `gemini-2.5-flash-lite-preview` for high-speed, intelligent responses.
 - **System Grounding**: The AI is "weighted" with a local tracking database (found in `script.js`), allowing it to provide exact status updates for specific IDs while maintaining a creative persona for advice and support.
 - **Context Awareness**: Maintains a session-based history to allow for follow-up questions.
 
