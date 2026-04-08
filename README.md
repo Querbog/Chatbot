@@ -71,24 +71,27 @@ graph TD
 
 ### 1. Home / Initial Greeting
 The AI initiates the conversation and offers immediate entry points.
-*(Add `screenshot_home.png` here)*
+<img width="1268" height="851" alt="image" src="https://github.com/user-attachments/assets/e162c4e9-a759-405b-adaa-19220fdf7025" />
+
 
 ### 2. Package Tracking in Action
 Natural language tracking: "Where is PKG-12345678?"
-*(Add `screenshot_tracking.png` here)*
+<img width="557" height="323" alt="image" src="https://github.com/user-attachments/assets/a6a47d18-ecea-4b43-b9c6-4f0addec74c9" />
+
 
 ### 3. Product Recommendation
 Guidance for high-fidelity product choices based on user needs.
-*(Add `screenshot_product.png` here)*
+<img width="541" height="431" alt="image" src="https://github.com/user-attachments/assets/9a76455a-8a47-4f55-aed7-ff3da18a7047" />
+
 
 ### 4. Technical Troubleshooting
 Step-by-step diagnostic loops for WiFi and hardware support.
-*(Add `screenshot_tech.png` here)*
+<img width="541" height="425" alt="image" src="https://github.com/user-attachments/assets/fa05b81f-8c3b-402f-80f4-227c316c5d5a" />
+
 
 ---
 
 ## 🛠️ Repository Structure
 - `index.html`: Main UI & Tailwind Integration.
 - `script.js`: AI Core & Conversation Logic.
-- `presentation.md`: Technical slides for the project.
 - `key.txt`: Gemini API key (reference).
