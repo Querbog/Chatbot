@@ -1,6 +1,6 @@
 // --- Configuration ---
 const API_KEY = 'AIzaSyCs7vC9Fo7wtJ7-b_0AIlmYhu9PuKJy-cU';
-const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite-preview:generateContent?key=${API_KEY}`;
+const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
 const packageDatabase = {
     'PKG-12345678': { status: 'delivered', date: 'Yesterday, 3:45 PM', location: 'Porch' },
