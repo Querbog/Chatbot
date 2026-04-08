@@ -21,13 +21,14 @@ CONTEXT:
 
 FORMATTING:
 - Keep responses concise.
+- Avoid using markdown bold (**) or other markers.
 - Provide 2 short options for quick replies in this format: [SUGGESTIONS: Option 1, Option 2]
 `;
 
 // --- State ---
 let chatHistory = [
     { role: 'user', parts: [{ text: SYSTEM_PROMPT }] },
-    { role: 'model', parts: [{ text: "Hello. I've initiated my support. How can I assist you?" }] }
+    { role: 'model', parts: [{ text: "Hello. Welcome to Support. How can I assist you?" }] }
 ];
 
 // --- DOM Elements ---
@@ -63,8 +64,8 @@ function addMessage(text, sender = 'bot') {
                 <div class="w-6 h-6 rounded bg-secondary flex items-center justify-center text-[10px] text-white font-bold">AI</div>
                 <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wide">${time}</span>
             </div>
-            <div class="bot-bubble bg-white border border-slate-100 p-5 text-[#0F172A] leading-relaxed shadow-sm max-w-2xl">
-                <p class="font-body text-sm">${text}</p>
+            <div class="bot-bubble bg-white border border-slate-100 p-5 text-[#0F172A] leading-relaxed shadow-sm max-w-[85%] md:max-w-2xl">
+                <p class="font-body text-sm whitespace-pre-wrap">${text}</p>
             </div>
         `;
     } else {
@@ -74,8 +75,8 @@ function addMessage(text, sender = 'bot') {
                 <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wide">${time}</span>
                 <div class="w-6 h-6 rounded bg-primary flex items-center justify-center text-[10px] text-white font-bold">JD</div>
             </div>
-            <div class="user-bubble bg-[#f0f4f7] border border-slate-200 p-5 text-[#0F172A] leading-relaxed shadow-sm max-w-2xl">
-                <p class="font-body text-sm">${text}</p>
+            <div class="user-bubble bg-[#f0f4f7] border border-slate-200 p-5 text-[#0F172A] leading-relaxed shadow-sm max-w-[85%] md:max-w-2xl">
+                <p class="font-body text-sm whitespace-pre-wrap">${text}</p>
             </div>
         `;
     }
@@ -180,7 +181,7 @@ async function handleUserInput(text) {
     const aiResponse = await callGemini(text);
     typing.remove();
 
-    const cleanResponse = parseAndSetSuggestions(aiResponse);
+    const cleanResponse = parseAndSetSuggestions(aiResponse).replace(/\*\*/g, '');
     addMessage(cleanResponse, 'bot');
 }
 
