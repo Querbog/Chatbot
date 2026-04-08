@@ -1,5 +1,5 @@
 // --- Configuration ---
-const API_KEY = 'AIzaSyCs7vC9Fo7wtJ7-b_0AIlmYhu9PuKJy-cU';
+const API_KEY = 'AIzaSyClWAwTPVXZLfCwVEXOd5iSSTK6yWDqw50';
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 
 const packageDatabase = {
